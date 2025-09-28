@@ -10,34 +10,27 @@ Aggregates responses into structured JSON
 Uses OpenAI GPT models to generate natural, friendly responses
 Easy to extend by adding new APIs to the registry
 
-## Project Structure:
-project-root/
-│── app.py              # Main FastAPI chatbot app
-│── mock_apis.py        # Mock APIs for testing
-│── requirements.txt    # Python dependencies
-│── README.md           # This file
-
 ## Setup
 1. Clone the repository
-git clone https://github.com/yourusername/multi-api-chatbot.git
-cd multi-api-chatbot
+- git clone https://github.com/yourusername/multi-api-chatbot.git
+- cd multi-api-chatbot
 2. Create a virtual environment
-python3 -m venv venv
-source venv/bin/activate     # Mac/Linux
-venv\Scripts\activate        # Windows
+- python3 -m venv venv
+- source venv/bin/activate     # Mac/Linux
+- venv\Scripts\activate        # Windows
 3. Install dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 4. Set your OpenAI API key
-export OPENAI_API_KEY="sk-xxxxxx"   # Mac/Linux
-setx OPENAI_API_KEY "sk-xxxxxx"     # Windows PowerShell
+- export OPENAI_API_KEY="sk-xxxxxx"   # Mac/Linux
+- setx OPENAI_API_KEY "sk-xxxxxx"     # Windows PowerShell
 
 ## Running the App:
 1. Start the mock APIs (for testing without real services)
-uvicorn mock_apis:mock_app --host 0.0.0.0 --port 8001 --reload
+- uvicorn mock_apis:mock_app --host 0.0.0.0 --port 8001 --reload
 2. Start the chatbot server
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+- uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 3. Access API docs
-Open your browser: http://localhost:8000/docs
+- Open your browser: http://localhost:8000/docs
 
 ## cURL Example:
 % curl -X POST http://localhost:8000/chat \
