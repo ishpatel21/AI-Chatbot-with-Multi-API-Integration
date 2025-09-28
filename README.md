@@ -40,16 +40,6 @@ Easy to extend by adding new APIs to the registry
 cURL Response:
 {"answer":"Sure! Your order #12345 was placed on September 10, 2025, for an X-ray Scan. The total amount of $199.99 has been paid successfully. If you need any more information or assistance, feel free to ask!","data":{"OrderAPI":{"orderId":"12345","date":"2025-09-10","items":["X-ray Scan"]},"PaymentAPI":{"amount":"199.99","status":"Paid"}}}%                            
 
-## API Registry:
-You can configure APIs in app.py as:
-- API_REGISTRY = [
-    {"name": "OrderAPI", "url": "http://localhost:8001/order", "description": "Fetch order details"},
-    {"name": "PaymentAPI", "url": "http://localhost:8001/payment", "description": "Fetch payment info"},
-    {"name": "PatientAPI", "url": "http://localhost:8001/patient", "description": "Fetch patient details"},
-    {"name": "LabAPI", "url": "http://localhost:8001/lab", "description": "Fetch lab test results"}
-]
-Add new APIs by adding them here. The chatbot will dynamically call them as needed.
-
 ## requirements.txt:
 - fastapi
 - uvicorn
