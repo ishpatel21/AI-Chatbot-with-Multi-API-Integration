@@ -2,7 +2,7 @@
 This project demonstrates a chatbot that fetches data from multiple APIs (Order, Payment, Patient, Lab, etc.) and returns a friendly, natural language response using OpenAI GPT models.
 It dynamically decides which APIs to call based on the user query and aggregates results in a structured format before generating a user-friendly reply.
 
-# Features:
+## Features:
 Handles dynamic user queries
 Detects which APIs are required per request
 Fetches data from multiple APIs in parallel
