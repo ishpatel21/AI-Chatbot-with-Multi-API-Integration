@@ -32,17 +32,17 @@ Easy to extend by adding new APIs to the registry
 3. Access API docs
 - Open your browser: http://localhost:8000/docs
 
-## cURL Example:
+## cURL Request:
 % curl -X POST http://localhost:8000/chat \
   -H "Content-Type: application/json" \
   -d '{"question": "Can I get my order receipt?", "patientId": "123"}'
 
-cURL response:
+cURL Response:
 {"answer":"Sure! Your order #12345 was placed on September 10, 2025, for an X-ray Scan. The total amount of $199.99 has been paid successfully. If you need any more information or assistance, feel free to ask!","data":{"OrderAPI":{"orderId":"12345","date":"2025-09-10","items":["X-ray Scan"]},"PaymentAPI":{"amount":"199.99","status":"Paid"}}}%                            
 
 ## API Registry:
 You can configure APIs in app.py as:
-API_REGISTRY = [
+- API_REGISTRY = [
     {"name": "OrderAPI", "url": "http://localhost:8001/order", "description": "Fetch order details"},
     {"name": "PaymentAPI", "url": "http://localhost:8001/payment", "description": "Fetch payment info"},
     {"name": "PatientAPI", "url": "http://localhost:8001/patient", "description": "Fetch patient details"},
@@ -51,15 +51,15 @@ API_REGISTRY = [
 Add new APIs by adding them here. The chatbot will dynamically call them as needed.
 
 ## requirements.txt:
-fastapi
-uvicorn
-aiohttp
-openai>=1.0.0
+- fastapi
+- uvicorn
+- aiohttp
+- openai>=1.0.0
 
 ## Future Improvements:
-Integrate vector search for FAQ or knowledge base queries
-Cache frequent API responses for speed
-Add authentication for sensitive APIs
-Extend AI logic for multi-turn conversations
+- Integrate vector search for FAQ or knowledge base queries
+- Cache frequent API responses for speed
+- Add authentication for sensitive APIs
+- Extend AI logic for multi-turn conversations
 
 Built with ❤️ as a demo project for multi-API chatbot integration with OpenAI GPT models.
